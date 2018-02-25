@@ -179,7 +179,7 @@ def controlla():
     training = pickle.load(open('training.dat', 'rb'))
     testing = pickle.load(open('testing.dat', 'rb'))
     val = pickle.load(open('validation.dat', 'rb'))
-    ascart()
+    print("Genetic Running... \n\n")
     totalevolutions = 50
     populationsize = 100
     population = initalizepop(populationsize)
@@ -191,18 +191,6 @@ def controlla():
         population = evolve(population, ev, totalevolutions)
         pickle.dump(pops, open('GenResults.dat', 'wb'), -1)
 
-def ascart():
-    print('________                                     __         .__     ')
-    print('\_____  \___  __ _____________  _  _______ _/  |_  ____ |  |__  ')
-    print(' /   |   \  \/ // __ \_  __ \ \/ \/ /\__  \\   __\/ ___\|  |  \ ')
-    print('/    |    \   /\  ___/|  | \/\     /  / __ \|  | \  \___|   Y  \ ')
-    print('\_______  /\_/  \___  >__|    \/\_/  (____  /__|  \___  >___|  /')
-    print('        \/          \/                    \/          \/     \/ ')
-    print('  ________                      __  .__                         ')
-    print(' /  _____/  ____   ____   _____/  |_|__| ____                   ')
-    print('/   \  ____/ __ \ /    \_/ __ \   __\  |/ ___\                  ')
-    print('\    \_\  \  ___/|   |  \  ___/|  | |  \  \___                  ')
-    print(' \______  /\___  >___|  /\___  >__| |__|\___  >   \n\n              ')
 
 
 if __name__ == "__main__":
